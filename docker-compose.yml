@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+  web:
+    build: .
+    networks:
+      - default
+    ports:
+      - 50000:5000
+    restart: always
+    volumes:
+      - vol1:/vol1
+volumes:
+  vol1:
